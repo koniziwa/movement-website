@@ -1,0 +1,19 @@
+.tile {
+  height: 160px;
+
+  border-radius: 20px;
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.10);
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  padding: 20px;
+
+  cursor: pointer;
+
+  p {
+    font-size: 28px;
+  }
+}

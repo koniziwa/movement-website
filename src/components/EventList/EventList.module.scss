@@ -1,0 +1,16 @@
+.container {
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.eventList {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}

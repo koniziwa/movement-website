@@ -1,0 +1,13 @@
+@import "./reset";
+@import "./fonts";
+
+html,
+body {
+  background-color: black;
+  color: white;
+
+  font-family: 'adineue', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+}

@@ -1,0 +1,15 @@
+.slider {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  margin-bottom: 60px;
+
+  span {
+    font-size: 32px;
+  }
+
+  img {
+    width: 12px;
+    cursor: pointer;
+  }
+}
