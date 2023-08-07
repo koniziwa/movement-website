@@ -1,0 +1,61 @@
+@import '../../scss/variables';
+
+.container {
+  width: 100%;
+
+  margin-top: 7.5rem;
+  padding: 0 4.75rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 40%;
+    border-radius: 2.5rem;
+  }
+}
+
+.about {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2.5rem;
+
+  h1 {
+    font-size: 3rem;
+    line-height: 130%;
+  }
+
+  p {
+    font-family: 'Milligram';
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 130%;
+  }
+
+  h3 {
+    margin-top: 1.25rem;
+
+    font-size: 2rem;
+    line-height: 130%;
+
+    span {
+      margin-left: 0.75rem;
+      color: $green;
+    }
+  }
+
+  button {
+    padding: 1.25rem 5rem;
+    font-size: 2rem;
+    border-radius: 1.25rem;
+    border: 3px solid white;
+    transition: border-color 0.2s ease-in-out;
+    &:hover {
+      border-color: $green;
+    }
+  }
+}

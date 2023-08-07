@@ -10,7 +10,6 @@ export default function EventList() {
         <EventTile />
         <EventTile />
         <EventTile />
-        <EventTile />
       </div>
       <PageSlider />
     </div>

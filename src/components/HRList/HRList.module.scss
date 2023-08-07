@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100%;
+  padding: 0 4.75rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5%;
+}

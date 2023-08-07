@@ -1,8 +1,15 @@
 .tiles {
   width: 67.5%;
-  height: 540px;
+  height: 30rem;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 2.5%;
+  gap: 2.5%;
+}
+
+@media screen and (max-width: 768px) {
+  .tiles {
+    grid-template-columns: repeat(3, 1fr);
+    height: 40rem;
+  }
 }

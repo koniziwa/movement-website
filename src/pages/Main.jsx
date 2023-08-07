@@ -4,7 +4,7 @@ import RecentProjects from "../components/RecentProjects/RecentProjects";
 
 export default function Main() {
   return (
-    <main style={{flex: '1 1 auto'}}>
+    <main>
       <Video />
       <Calendar />
       <RecentProjects />

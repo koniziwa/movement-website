@@ -1,0 +1,47 @@
+@import '../../../scss/variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 0.75rem;
+
+  img {
+    border-radius: 1.25rem;
+    width: 100%;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+
+  p {
+    font-family: 'Milligram';
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 130%;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    margin-top: 1.25rem;
+    border: 3px solid white;
+    border-radius: 0.75rem;
+    transition: border-color 0.2s ease-in-out;
+
+    &:hover {
+      border-color: $blue;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    h3 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+}
