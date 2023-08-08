@@ -24,3 +24,13 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .tile {
+    width: 39vw;
+    justify-content: center;
+    p {
+      font-size: 1.75rem;
+    }
+  }
+}

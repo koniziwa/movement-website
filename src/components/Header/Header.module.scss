@@ -4,12 +4,18 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 
   background-color: black;
-  z-index: 10;
-  width: 100%;
+  
+  width: 100vw;
   height: 5rem;
+  
   border-bottom: 2px solid #414141;
+
+  img {
+    display: none;
+  }
 }
 
 .nav {
@@ -45,6 +51,8 @@
   text-decoration: none;
 }
 
+
+// ------------------ TABLET ----------------------
 @media screen and (max-width: 768px) {
   .nav {
     display: none;
@@ -58,5 +66,66 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    img {
+      display: block;
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  .menu {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .menuList {
+    height: 100vh;
+    width: 30vw;
+
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .menuItem {
+    font-size: 2rem;
+
+    &:hover {
+      color: $pink;
+    }
+  }
+}
+
+// ------------ MOBILE -------------------
+@media screen and (max-width: 480px) {
+  .header {
+    height: auto;
+    padding: 2.125rem;
+
+    img {
+      width: 2rem;
+    }
+  }
+
+  .menuList {
+    width: 100vw;
+
+    gap: 4rem;
   }
 }

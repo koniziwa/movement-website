@@ -14,3 +14,14 @@
   align-items: center;
   column-gap: 5%;
 }
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 0;
+  }
+
+  .list {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}

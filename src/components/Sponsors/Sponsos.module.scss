@@ -23,3 +23,13 @@
     width: auto;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .sponsors {
+    margin-top: 3rem;
+  }
+
+  .loop {
+    height: 10.75rem;
+  }
+}

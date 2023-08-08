@@ -1,5 +1,4 @@
 import styles from './Description.module.scss';
-import Title from '../ui/Title/Title';
 
 export default function Description() {
   return (

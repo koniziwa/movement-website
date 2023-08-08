@@ -38,3 +38,19 @@
   right: 10vw;
 }
 
+@media screen and (max-width: 480px) {
+  .mainPoster {
+    width: 50vw !important;
+  }
+  .leftPoster {
+    left: 15vw;
+  }
+  .rightPoster {
+    right: 15vw;
+  }
+  .posters {
+    img {
+      width: 30vw;
+    }
+  }
+}

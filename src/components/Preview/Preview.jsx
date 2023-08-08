@@ -7,8 +7,8 @@ export default function Preview() {
       <Title>о нас</Title>
       <div className={styles.container}>
         <div className={styles.elements}>
-          <h1>Movement</h1>
-          <img src="" alt="" />
+          <img className={styles.text} src="/img/movement-text.svg" alt="Movement" />
+          <img className={styles.icons} src="/img/icons.svg" alt="Icons" />
         </div>
         <img className={styles.photo} src="/img/photo.jpg" alt="Movement" />
       </div>
