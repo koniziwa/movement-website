@@ -1,6 +1,18 @@
-.image {
+.video {
   width: 100vw;
-  opacity: 0.4;
+  animation: video-opacity 15s 1;
+}
+
+@keyframes video-opacity {
+  0% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .logo {
@@ -8,7 +20,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .image {
+  .video {
     display: none;
   }
   .section {

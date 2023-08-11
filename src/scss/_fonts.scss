@@ -1,17 +1,21 @@
 @font-face {
   font-family: 'adineue';
-  src: url('../assets/fonts/adineueprocyr_boldweb.woff2');
+  /* IE9+ Compat Modes */
+  src: url('../assets/fonts/AdineuePro-Bold.eot') format('embedded-opentype'),
+  /* Super Modern Browsers */ url('../assets/fonts/AdineuePro-Bold.woff2') format('woff2'),
+  /* Pretty Modern Browsers */ url('../assets/fonts/AdineuePro-Bold.woff') format('woff'),
+  /* Safari, Android, iOS */ url('../assets/fonts/AdineuePro-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Milligram';
-  src: url('../assets/fonts/Milligram-Light-trial.woff2');
+  src: url('../assets/fonts/Milligram-Light.woff2');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Milligram';
-  src: url('../assets/fonts/Milligram-Medium-trial.woff2');
+  src: url('../assets/fonts/Milligram-Medium.woff2');
   font-weight: 500;
 }
