@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   const [isMenuActive, setMenuActive] = React.useState<boolean>(width > tablet)
 
   React.useEffect(() => {
-    setMenuActive(() => width > tablet)
+    setMenuActive(width > tablet)
   }, [width])
  
   return (
@@ -26,10 +26,9 @@ const Header: React.FC = () => {
         {isMenuActive && <ul>
           {menuItems.map((item, index) => (
             <Link 
-              onClick={() => setMenuActive(() => width > tablet)}
+              onClick={() => setMenuActive(width > tablet)}
               to={item.linkTo} 
               key={index}
-              className={styles.link}
             >
               <li>{item.title}</li>
             </Link>

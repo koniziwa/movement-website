@@ -1,0 +1,24 @@
+.input {
+  width: 100%;
+
+  padding: 1.25rem;
+  border-radius: 20px;
+
+  background-color: white;
+
+  display: flex;
+  column-gap: 1.25rem;
+
+  img {
+    width: 1rem;
+  }
+
+  input {
+    font-size: 1.5rem;
+    color: black;
+
+    &::placeholder {
+      color: #9e9e9e;
+    }
+  }
+}

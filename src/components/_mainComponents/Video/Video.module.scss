@@ -1,0 +1,33 @@
+.section {
+  video {
+    width: 100vw;
+    animation: video-opacity 15s;
+  }
+}
+
+@keyframes video-opacity {
+  0% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 50vw;
+    }
+  }
+}

@@ -1,15 +1,18 @@
-import styles from './Tile.module.scss'
+import styles from "./Tile.module.scss";
 
 type TileProps = {
-  children: string
-}
+  active: boolean;
+  children: string;
+};
 
-const Tile: React.FC<TileProps> = ({ children }) => {
+const Tile: React.FC<TileProps> = ({ children, active }) => {
   return (
-    <div className={styles.tile}>
-      <p>{ children }</p>
+    <div
+      className={styles.tile + " " + (active ? styles.active : styles.default)}
+    >
+      <p>{children}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Tile
+export default Tile;

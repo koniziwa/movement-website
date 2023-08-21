@@ -10,12 +10,20 @@
 
 @font-face {
   font-family: 'Milligram';
-  src: url('../assets/fonts/Milligram-Light.woff2');
+  /* IE9+ Compat Modes */
+  src: url('../assets/fonts/Milligram-Light.eot') format('embedded-opentype'),
+  /* Super Modern Browsers */ url('../assets/fonts/Milligram-Light.woff2') format('woff2'),
+  /* Pretty Modern Browsers */ url('../assets/fonts/Milligram-Light.woff') format('woff'),
+  /* Safari, Android, iOS */ url('../assets/fonts/Milligram-Light.ttf') format('truetype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Milligram';
-  src: url('../assets/fonts/Milligram-Medium.woff2');
+  /* IE9+ Compat Modes */
+  src: url('../assets/fonts/Milligram-Medium.eot') format('embedded-opentype'),
+  /* Super Modern Browsers */ url('../assets/fonts/Milligram-Medium.woff2') format('woff2'),
+  /* Pretty Modern Browsers */ url('../assets/fonts/Milligram-Medium.woff') format('woff'),
+  /* Safari, Android, iOS */ url('../assets/fonts/Milligram-Medium.ttf') format('truetype');
   font-weight: 500;
 }

@@ -1,11 +1,13 @@
-import HR from "../components/HR/HR";
-import Sponsors from "../components/Sponsors/Sponsors";
+import HR from "../components/_contactsComponents/HR/HR";
+import Sponsors from "../components/_contactsComponents/Sponsors/Sponsors";
 
-export default function Contacts() {
+const Contacts: React.FC = () => {
   return (
     <main>
       <HR />
       <Sponsors />
     </main>
-  )
-}
+  );
+};
+
+export default Contacts;

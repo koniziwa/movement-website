@@ -1,0 +1,42 @@
+.container {
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+.eventList {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.slider {
+  display: flex;
+  column-gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 3.25rem;
+
+  span {
+    font-size: 2rem;
+  }
+
+  img {
+    width: 0.75rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 80%;
+    margin-bottom: 4rem;
+  }
+}

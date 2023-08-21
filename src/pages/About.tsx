@@ -1,5 +1,5 @@
-import Preview from "../components/Preview/Preview"
-import Info from "../components/Info/Info"
+import Preview from "../components/_aboutComponents/Preview/Preview";
+import Info from "../components/_aboutComponents/Info/Info";
 
 const About: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const About: React.FC = () => {
       <Preview />
       <Info />
     </main>
-  )
-}
+  );
+};
 
-export default About
+export default About;

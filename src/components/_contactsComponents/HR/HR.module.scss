@@ -1,0 +1,28 @@
+.section {
+  width: 100%;
+  padding: 0 4.75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  position: relative;
+  z-index: 1;
+
+  .list {
+    width: 80%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5%;
+    row-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    padding: 0;
+  }
+}

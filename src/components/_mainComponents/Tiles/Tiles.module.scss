@@ -1,0 +1,24 @@
+.tiles {
+  width: 67.5%;
+  height: 30rem;
+
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5%;
+}
+
+@media screen and (max-width: 768px) {
+  .tiles {
+    grid-template-columns: repeat(3, 1fr);
+    height: 40rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tiles {
+    display: none;
+  }
+}
