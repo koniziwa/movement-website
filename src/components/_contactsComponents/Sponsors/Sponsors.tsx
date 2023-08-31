@@ -3,28 +3,25 @@ import axios from "axios";
 
 import Title from "../../ui/Title/Title";
 
-import { sponsorObject } from "../../../@types/types";
+import { PhotoType, AlbumType } from "../../../@types/types";
 
 import { url } from "../../../constants/url";
 
 import styles from "./Sponsors.module.scss";
 
 const Sponsors: React.FC = () => {
-  const [sponsorsList, setSponsorsList] = React.useState<sponsorObject[]>([
-    {
-      id: 0,
-      name: "",
-      logo: "",
-      logo_url: "",
-      site_link: "",
-    },
-  ]);
+  const [sponsorsList, setSponsorsList] = React.useState<string[]>([""]);
 
   React.useEffect(() => {
+    const fetchSponsors = async () => {
+      const { data } = await axios.get<AlbumType>(
+        `${url}/events/api/photoalbum/6/`
+      );
+      setSponsorsList(data.photos);
+    };
+
     try {
-      axios
-        .get("http://127.0.0.1:8000/events/api/sponsor/")
-        .then((response) => setSponsorsList(response.data));
+      fetchSponsors();
     } catch (e) {
       console.log(e);
     }
@@ -35,13 +32,13 @@ const Sponsors: React.FC = () => {
       <Title>с нами сотрудничали</Title>
       <div className={styles.loop}>
         <div>
-          {sponsorsList.map((item) => (
-            <img key={item.id} src={url + item.logo_url} alt={item.name} />
+          {sponsorsList.map((imageUrl) => (
+            <img key={imageUrl} src={url + imageUrl} alt={imageUrl} />
           ))}
         </div>
         <div>
-          {sponsorsList.map((item) => (
-            <img key={item.id} src={url + item.logo_url} alt={item.name} />
+          {sponsorsList.map((imageUrl) => (
+            <img key={imageUrl} src={url + imageUrl} alt={imageUrl} />
           ))}
         </div>
       </div>

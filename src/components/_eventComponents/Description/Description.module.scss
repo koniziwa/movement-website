@@ -23,13 +23,18 @@
     align-items: flex-start;
     row-gap: 2.5rem;
 
+    div {
+      display: flex;
+      column-gap: 2rem;
+    }
+
     h1 {
       font-size: 3rem;
       line-height: 130%;
     }
 
     p {
-      font-family: "Milligram";
+      font-family: "Onest";
       font-weight: 300;
       font-size: 1.25rem;
       line-height: 130%;
@@ -57,6 +62,13 @@
         border-color: $green;
       }
     }
+
+    button:last-child {
+      padding: 1.25rem;
+      &:hover {
+        border-color: $blue;
+      }
+    }
   }
 }
 
@@ -79,7 +91,7 @@
       width: 70vw;
     }
 
-    div {
+    .description {
       width: 70vw;
       row-gap: 0.75rem;
 

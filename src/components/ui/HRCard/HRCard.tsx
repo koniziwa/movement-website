@@ -1,19 +1,18 @@
-import React from 'react'
+import React from "react";
 
-import { Person } from '../../../@types/types'
+import { PersonType } from "../../../@types/types";
 
-import { url } from '../../../constants/url'
+import { url } from "../../../constants/url";
 
-import styles from './HRCard.module.scss'
+import styles from "./HRCard.module.scss";
 
-const HRCard: React.FC<Person> = ({
+const HRCard: React.FC<PersonType> = ({
   name,
   surname,
   telegram,
   position,
-  photo_url
+  photo_url,
 }) => {
-
   return (
     <div className={styles.card}>
       <img src={url + photo_url} alt="HR Card" />
@@ -25,7 +24,7 @@ const HRCard: React.FC<Person> = ({
         <span>{position}</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HRCard
+export default HRCard;

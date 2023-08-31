@@ -9,7 +9,7 @@ type TrailerProps = {
 const Trailer: React.FC<TrailerProps> = ({ trailerURL }) => {
   return (
     <section className={styles.section}>
-      <Title>Трейлер</Title>
+      <Title>трейлер</Title>
       <div>
         <iframe
           title={trailerURL}

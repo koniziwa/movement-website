@@ -1,7 +1,6 @@
-export const whereKnow: string[] = [
+export const whereKnew: string[] = [
   "Рассказали друзья",
   "Увидел группу в VK",
   "Увидел постер/афишу",
   "Увидел на сайте",
-  "Другое",
 ];

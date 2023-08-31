@@ -4,28 +4,36 @@ import axios from "axios";
 import Title from "../../ui/Title/Title";
 import HRCard from "../../ui/HRCard/HRCard";
 
-import { Person } from "../../../@types/types";
+import { PersonType } from "../../../@types/types";
+import { url } from "../../../constants/url";
 
 import styles from "./HR.module.scss";
 
 const HR: React.FC = () => {
-  const [headList, setHeadList] = React.useState<Person[]>([
+  const [headList, setHeadList] = React.useState<PersonType[]>([
     {
-      id: 0,
       name: "",
       surname: "",
       fathers_name: "",
       email: "",
       where_knew: "",
       telegram: "",
+      from_hse: true,
+      university: "",
+      faculty: null,
+      event: "",
+      event_id: 0,
     },
   ]);
 
   React.useEffect(() => {
+    const fetchHeads = async () => {
+      const { data } = await axios.get<PersonType[]>(`${url}/events/api/head/`);
+      setHeadList(data);
+    };
+
     try {
-      axios
-        .get("http://127.0.0.1:8000/events/api/head/")
-        .then((response) => setHeadList(response.data));
+      fetchHeads();
     } catch (e) {
       console.log(e);
     }
@@ -36,7 +44,7 @@ const HR: React.FC = () => {
       <Title>руководство</Title>
       <div className={styles.list}>
         {headList.map((item) => (
-          <HRCard key={item.id} {...item} />
+          <HRCard key={item.telegram} {...item} />
         ))}
       </div>
     </section>

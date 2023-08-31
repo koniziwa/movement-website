@@ -23,3 +23,64 @@
     }
   }
 }
+
+.posters {
+  width: 50vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    &:first-child {
+      img {
+        left: 5vw;
+      }
+    }
+    &:nth-child(2) {
+      img {
+        z-index: 1;
+        width: 30vw;
+        box-shadow: 0px 4px 40px 30px rgba(0, 0, 0, 0.5);
+      }
+    }
+    &:last-child {
+      img {
+        right: 5vw;
+      }
+    }
+  }
+
+  img {
+    position: relative;
+    border-radius: 1.25rem;
+
+    width: 20vw;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .posters {
+    width: 80vw;
+
+    a {
+      &:nth-child(2) {
+        img {
+          width: 70vw;
+        }
+      }
+    }
+
+    img {
+      width: 40vw;
+    }
+  }
+}

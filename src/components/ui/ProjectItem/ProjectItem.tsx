@@ -11,12 +11,20 @@ const ProjectItem: React.FC<EventObject> = ({
   name,
   short_description,
   logo_url,
+  partners_event,
+  category,
 }) => {
   return (
     <div className={styles.card}>
       <img src={url + logo_url} alt={name} />
       <h3>{name}</h3>
       <p>{short_description}</p>
+      <div>
+        {partners_event && <span>партнёрское</span>}
+        {category.split(" ").map((category) => (
+          <span key={category}>{category}</span>
+        ))}
+      </div>
       <Link to={"/event/" + id}>
         <button>Подробнее</button>
       </Link>

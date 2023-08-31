@@ -1,54 +1,57 @@
 import React from "react";
 
-import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../../redux/store";
-import { fetchEvents } from "../../../redux/eventSlice/asyncActions";
+import { resetCategories } from "../../../redux/filterSlice/slice";
+import { sortItems } from "../../../redux/eventSlice/slice";
+
+import FilterItem from "../../ui/FilterItem";
+
+import { categories } from "../../../constants/categories";
 
 import styles from "./Filter.module.scss";
 
 const Filter: React.FC = () => {
+  const [isMenuActive, setMenuActive] = React.useState<boolean>(false);
+  const [isAscending, setAscending] = React.useState<boolean>(false);
   const dispatch = useAppDispatch();
-  const [isCheckActive, setCheckActive] = React.useState<boolean>(true);
 
-  React.useEffect(() => {
-    dispatch(fetchEvents());
-    window.scrollTo(0, 0);
-  }, []);
+  const handleResetButton = () => {
+    dispatch(sortItems("desc"));
+    setAscending(false);
+    dispatch(resetCategories());
+    setMenuActive(false);
+  };
 
-  const handleCheckButton = () => {
-    setCheckActive(!isCheckActive);
+  const handleSortClick = () => {
+    isAscending ? dispatch(sortItems("desc")) : dispatch(sortItems("asc"));
+    setAscending((isAscending) => !isAscending);
   };
 
   return (
     <div className={styles.filter}>
-      <div className={styles.filterList}>
-        <div className={styles.sortByName}>
-          <span>Сортировать по</span>
-          <button>
-            <img src="" alt="" />
-            <span>названию</span>
-            <img src="" alt="" />
-          </button>
-        </div>
-        <div className={styles.sortByCheck}>
-          <img
-            onClick={() => handleCheckButton()}
-            src={
-              isCheckActive
-                ? "/img/check-active.svg"
-                : "/img/check-nonactive.svg"
-            }
-            alt="Checkbox"
-          />
-          <span>Показывать прошедшие</span>
-        </div>
-        <div className={styles.sortByDate}>
-          <button>25.09.20</button>
-          <hr />
-          <button>25.09.23</button>
-        </div>
+      <div>
+        <p>
+          Сортировать по
+          <span onClick={() => handleSortClick()}>
+            <img
+              src={isAscending ? "/img/sort_asc.svg" : "img/sort_desc.svg"}
+              alt="sort"
+            />
+            дате
+          </span>
+        </p>
+        <span onClick={() => setMenuActive(!isMenuActive)}>
+          Категории
+          {isMenuActive && (
+            <ul onClick={(e) => e.stopPropagation()}>
+              {categories.map((categoryName, index) => (
+                <FilterItem key={index} categoryName={categoryName} />
+              ))}
+            </ul>
+          )}
+        </span>
       </div>
-      <button className={styles.resetBtn}>Сбросить</button>
+      <button onClick={() => handleResetButton()}>Сбросить</button>
     </div>
   );
 };

@@ -1,47 +1,41 @@
-export type Person = {
-  id: number,
-  name: string,
-  surname: string,
-  fathers_name: string,
-  email: string,
-  where_knew: string,
-  telegram: string,
-  position?: string,
-  photo?: string,
-  photo_url?: string
-}
+export type PersonType = {
+  name: string;
+  surname: string;
+  fathers_name: string;
+  email: string;
+  where_knew: string;
+  telegram: string;
+  position?: string;
+  photo?: string;
+  photo_url?: string;
+  from_hse: boolean;
+  university: string;
+  faculty: string | null;
+  event: string;
+  event_id: number;
+};
 
-export type Photo = {
-  url: string,
-  image: string,
-  title: string,
-  album: string | null
-}
+export type PhotoType = {
+  id: number;
+  image: string;
+  album: string | null;
+  title: string;
+};
 
-type SortObject = {
-  name: string,
-  property: string,
-  type: string
-}
+export type AlbumType = {
+  id: number;
+  name: string;
+  photos: string[];
+};
 
-export type FilterObject  = {
-  showPast: boolean,
-  startDate: string,
-  endDate: string,
-  sort: SortObject
-}
-
-export type PhotoObject = {
-  id: number,
-  image: string,
-  album: string,
-  title: string
-}
-
-export type sponsorObject = {
-  id: number,
-  name: string,
-  logo: string,
-  logo_url: string,
-  site_link: string
-}
+export type TeamType = {
+  name: string;
+  telegram: string;
+  email: string;
+  captain: string;
+  members: string;
+  event: string;
+  event_id: number;
+  amount_of_members: number;
+  where_knew: string;
+};

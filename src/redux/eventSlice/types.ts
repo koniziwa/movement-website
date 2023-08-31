@@ -17,6 +17,8 @@ export type EventObject = {
   status: string;
   photo_album: string;
   partners_event: boolean;
+  category: string;
+  vk_url: string | null;
 };
 
 export enum Status {

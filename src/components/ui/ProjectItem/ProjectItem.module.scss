@@ -1,4 +1,4 @@
-@import '../../../scss/variables';
+@import "../../../scss/variables";
 
 .card {
   display: flex;
@@ -16,10 +16,29 @@
   }
 
   p {
-    font-family: 'Milligram';
+    font-family: "Onest";
     font-weight: 300;
     font-size: 1rem;
     line-height: 130%;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  span {
+    display: inline;
+
+    font-family: "Onest";
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 130%;
+
+    padding: 0.5rem 1rem;
+    border: 1px solid $blue;
+    border-radius: 0.5rem;
   }
 
   button {
@@ -28,6 +47,9 @@
     border: 3px solid white;
     border-radius: 0.75rem;
     transition: border-color 0.2s ease-in-out;
+
+    font-family: "Onest";
+    font-weight: 500;
 
     &:hover {
       border-color: $blue;

@@ -16,17 +16,20 @@ const Event: React.FC = () => {
   const [event, setEvent] = React.useState<EventObject>();
 
   React.useEffect(() => {
-    async function fetchEvent() {
-      try {
-        const { data } = await axios.get(url + "/events/api/event/" + id + "/");
-        setEvent(data);
-      } catch (e) {
-        navigate("/PageNotFound");
-      }
-    }
+    const fetchEvent = async () => {
+      const { data } = await axios.get<EventObject>(
+        `${url}/events/api/event/${id}/`
+      );
+      setEvent(data);
+    };
 
-    fetchEvent();
-  }, []);
+    try {
+      fetchEvent();
+    } catch (e) {
+      console.log(e);
+      navigate("/PageNotFound");
+    }
+  }, [id]);
 
   if (!event) {
     return <></>;
