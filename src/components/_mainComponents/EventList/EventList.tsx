@@ -29,11 +29,15 @@ const EventList: React.FC<EventListProps> = ({ year }) => {
     }
   };
 
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [year]);
+
   const events = eventsByYear
     .filter((_, index) => {
       return index >= (currentPage - 1) * 3 && index < currentPage * 3;
     })
-    .map((obj) => <EventTile key={obj.id} {...obj} />);
+    .map((obj) => <EventTile key={obj.name} {...obj} />);
 
   return (
     <div className={styles.container}>

@@ -22,7 +22,10 @@ const Video: React.FC = () => {
       {isMobileWidth ? (
         <img src="/img/movement-default-logo.svg" alt="Movement-logo" />
       ) : (
-        <video src="/img/" autoPlay muted />
+        <video autoPlay muted>
+          <source src="/img/main-video.webm" type="video/webm" />
+          <source src="/img/main-video.mp4" type="video/mp4;" />
+        </video>
       )}
     </section>
   );
