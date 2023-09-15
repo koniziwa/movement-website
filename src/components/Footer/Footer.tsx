@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
         <div>
-          <span>movement@hse.ru</span>
+          <span>МИЭМ НИУ ВШЭ</span>
           <p>ул. Таллинская, 34, Москва, 123592</p>
         </div>
       </div>
