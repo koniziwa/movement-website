@@ -1,1 +1,1 @@
-export const url: string = "https://ivanm2114.pythonanywhere.com";
+export const url: string = "http://movement-events.ru";

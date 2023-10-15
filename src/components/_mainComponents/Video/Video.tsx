@@ -24,7 +24,7 @@ const Video: React.FC = () => {
       ) : (
         <video autoPlay muted>
           <source src="/img/main-video.webm" type="video/webm" />
-          <source src="/img/main-video.mp4" type="video/mp4;" />
+          <source src="/img/main-video.mp4" type="video/mp4" />
         </video>
       )}
     </section>
