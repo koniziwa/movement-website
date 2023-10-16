@@ -11,7 +11,6 @@ const Description: React.FC<EventObject> = ({
   long_description,
   logo_url,
   status,
-  registration_url,
   vk_url,
 }) => {
   return (
@@ -27,11 +26,6 @@ const Description: React.FC<EventObject> = ({
         </h3>
 
         <div>
-          {status === "открыта регистрация" && (
-            <a href={registration_url} target="_blank" rel="noreferrer">
-              <button>Регистрация</button>
-            </a>
-          )}
           {vk_url && (
             <a href={vk_url} target="_blank" rel="noreferrer">
               <button>VK</button>
